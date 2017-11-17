@@ -8,7 +8,7 @@ class Test
     public static void main(String[] args) throws Exception
     {
         
-        Socket client = new Socket(InetAddress.getLocalHost(), 20006);
+        Socket client = new Socket("127.0.0.1", 20006);
 
        new ThreadWriter(client).start();
        new ThreadReader(client).start();
